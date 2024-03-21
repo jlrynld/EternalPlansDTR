@@ -4,7 +4,7 @@
     <div class="container" style="max-width: 600px;">
         <div class="mt-5">
           <form action="{{ route ('sign-in') }} " method="POST">       
-
+            @csrf
                 <h3 class="mb-4 mx-auto text-center"> 
                       Login with your email and password
                  </h3>
@@ -19,10 +19,10 @@
                 </div>
             @endif
 
-            @csrf
+          
 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="JLBRYNLD@GMAIL.COM">
+                <input type="email" class="form-control" name="email" id="email" placeholder="myemail@GMAIL.COM">
                     <label for="email">Email</label>
             </div>
 
@@ -30,7 +30,7 @@
                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     <label for="password">Password</label>
                 <span id="showEye">
-                    <i class='bx bxs-sushi' id="eye" onclick="showPassword(pass, eye)"></i>
+                    <i class='bx bxs-hide' id="eye" onclick="showPassword(pass, eye)"></i>
                 </span>
 
             </div>
@@ -45,4 +45,5 @@
             </div>
             </form>
         </div>
+        
 @endsection

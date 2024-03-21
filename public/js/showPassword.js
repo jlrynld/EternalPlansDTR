@@ -8,11 +8,11 @@ function showPassword(pass, eye){
         pass.type = "text";
         eye.ariaHidden='true'
         eye.style.color='#5887ef';
-        eye.classList.replace("bx bxs-sushi", "bx bx-show");
+        eye.classList.replace("bxs-hide", "bxs-show");
     } else {
         pass.type = "password";
         eye.style.color='#7a797e';
         eye.ariaHidden='false'
-        eye.classList.replace("bx bx-show", "bx bxs-sushi");
+        eye.classList.replace("bxs-show", "bxs-hide");
     }
 }

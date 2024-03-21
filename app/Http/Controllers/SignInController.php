@@ -16,7 +16,9 @@ class SignIncontroller extends Controller {
         try{
             if(Auth::attempt(['email' => $request->email, 'password' => $request->password, ] , $request->remember)) {
                if(Auth::user()->type == 'Manager')
-                    return redirect()->route('dashboardhome.index');
+                    return redirect()->route('dashboard.index');
+
+                    return redirect()->route('dashboard.index');
             }
             return back()->with('error', 'Invalid Credentials');
               } catch (\Throwable $th) {
