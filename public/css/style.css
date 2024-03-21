@@ -1,0 +1,80 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.signup {
+    padding-left: 150px;
+    padding-top: 15px;
+}
+
+.signup-1 {
+    font-weight: bold;  
+    font-size:25px;
+    color:#322933;
+    padding-left: 250px;
+    padding-top: 10px;
+    text-align: right;
+    text-decoration: none !important;
+}
+
+h1, h2 {
+    font-weight: bold;  
+}
+
+.body-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+
+.header {
+    width: 350px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    width: 65px !important;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+footer {
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#showEye {
+    position: absolute;
+    right: 15px;
+    transform: translate(0,-50%);
+    top: 50%;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+#eye, #eye1 {
+    font-size: 25px;
+    color: #7a797e;
+}
