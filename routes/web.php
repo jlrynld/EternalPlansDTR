@@ -9,7 +9,6 @@ use Illuminate\Http\Requests;
 
 Route::get('' , [SignInController::class, 'index'])->name(('signup'));
 
-
 Route::middleware('guest')->group(function(){
     Route::get('/sign-up', [SignUpController::class, 'index'])->name('sign-up.index');
     Route::post('/sign-up', [SignUpController::class, 'signUp'])->name('sign-up');
