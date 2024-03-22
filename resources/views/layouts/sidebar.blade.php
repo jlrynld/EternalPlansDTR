@@ -11,23 +11,19 @@
     <!-- ====== Boxicons ====== -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
+  <body>
 
-<div class="p-3 text-white bg-dark" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Menu</span>
+<div class="p-4 text-white bg-dark sidebar">
+ 
+    <a href="{{ asset('dashboard') }}" class="d-flex text-white text-decoration-none">    
+        <img class="mx-2 logo " src="css/logo/ETERNALLOGO.png" alt="index">
+      <span class="fs-4">Eternal Plans, Inc.</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="{{ asset('dashboard') }}" class="nav-link active" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
           Dashboard
         </a>
       </li>
@@ -71,6 +67,7 @@
   </div>
 
 
+  </body>
 <footer class="mt-5"> </footer>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
