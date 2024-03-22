@@ -11,10 +11,11 @@
     <!-- ====== Boxicons ====== -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
-  <body>
+<body>
 
-<div class="p-4 text-white bg-dark sidebar">
- 
+    <!-- ====== Sidebar ====== -->
+
+  <div class="p-4 text-white bg-dark sidebar">
     <a href="{{ asset('dashboard') }}" class="d-flex text-white text-decoration-none">    
         <img class="mx-2 logo " src="css/logo/ETERNALLOGO.png" alt="index">
       <span class="fs-4">Eternal Plans, Inc.</span>
