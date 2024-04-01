@@ -4,4 +4,4 @@
 <h1>HELLO WORLD</h1>
 @endsection
 
-<h1 class ="text-center">HELLO WORLD2</h1>
+<h1 class ="text-center m-3"> SAMPLE TEXT </h1>

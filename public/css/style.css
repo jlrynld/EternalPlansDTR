@@ -113,3 +113,7 @@ body {
     position: fixed;
     background: var(--sidebar-color);
 }
+
+.sidebar.close .text{
+    width: 78px;
+}

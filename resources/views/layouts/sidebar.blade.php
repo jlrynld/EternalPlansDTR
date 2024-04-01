@@ -25,14 +25,14 @@
       <li class="nav-item">
         <a href="{{ asset('home') }}" class="nav-link text-white" aria-current="page">
           <i class='bx bxs-home'></i>  
-          Dashboard
+          <span class="text"> Dashboard </span>
         </a>
       </li>
              
       <li class="nav-item">
         <a href="{{ asset('sample') }}" class="nav-link text-white" aria-current="page">
           <i class='bx bxs-layer' ></i>
-          Lorem Ipsum
+          <span class="text"> Lorem Ipsum </span>
         </a>
       </li>
 
