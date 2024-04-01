@@ -81,7 +81,7 @@ th, td {
     /* ==== COLORS ==== */
     --body-color: #2e50af;
     --sidebar-color: #FFF;
-    --primarly-color: #695CFE;
+    --primarly-color: #00b33c;
     --primary-color-light: #F6F5FF ;
     --toggle-color: #DDD;
     --text-color: #707070;
@@ -92,7 +92,13 @@ th, td {
      --tran-03: all 0.4 ease;
      --tran-04: all 0.4 ease;
      --tran-05: all 0.4 ease;
-}
+
+
+    }
+
+.sidebar li  a:hover, .sidebar li button:hover {
+        background: var(--primarly-color);
+    }
 
 body {
     height: 100vh;

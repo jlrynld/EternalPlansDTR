@@ -25,7 +25,7 @@
 
                 <div class="form-floating mb-3">
                     <select name="type" class="form-control" id="type" required>
-                        <option value="Intern" {{ old('type') == 'Intern' ? "selected":"" }}>Intern</option>
+                        <option value="Employee" {{ old('type') == 'Employee' ? "selected":"" }}>Employee</option>
                         <option value="Manager" @if(old('type')== 'Manager') selected @endif >Manager</option>
                     </select>
                     <label for="type">User Type <span class="text-danger">*</span></label>
@@ -72,7 +72,7 @@
                 <div class="text-center">
                       <input style="width: 100%" type="submit" value="Register account" class="btn btn-success mb-3 mt-2">
                 </div>
-                <div class="text-center">
+                <div class="text-center pb-5">
                     Already have an account? <a href="{{ route('sign-in.index') }}">Sign-in</a>
                 </div>
             </form>

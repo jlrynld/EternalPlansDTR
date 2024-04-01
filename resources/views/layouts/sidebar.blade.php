@@ -16,42 +16,32 @@
     <!-- ====== Sidebar ====== -->
 
   <div class="p-4 text-white bg-dark sidebar">
-    <a href="{{ asset('dashboard') }}" class="d-flex text-white text-decoration-none">    
+    <a href="{{ asset('home') }}" class="d-flex text-white text-decoration-none">    
         <img class="mx-2 logo " src="css/logo/ETERNALLOGO.png" alt="index">
       <span class="fs-4">Eternal Plans, Inc.</span>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
+    <ul class="nav nav-pills flex-column">
       <li class="nav-item">
-        <a href="{{ asset('dashboard') }}" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+        <a href="{{ asset('home') }}" class="nav-link text-white" aria-current="page">
+          <i class='bx bxs-home'></i>  
           Dashboard
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Orders
+             
+      <li class="nav-item">
+        <a href="{{ asset('sample') }}" class="nav-link text-white" aria-current="page">
+          <i class='bx bxs-layer' ></i>
+          Lorem Ipsum
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Customers
-        </a>
-      </li>
+
     </ul>
     <hr>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="css/logo/poring.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</strong>
+        <i class='bx bxs-user-circle bx-sm p-1'></i>
+       <strong> {{ auth()->user()->firstname }} </strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
         <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -59,7 +49,7 @@
         <li><a class="dropdown-item" href="#">Profile</a></li>
         <li><hr class="dropdown-divider"></li>
         <form action="{{ route('sign-out') }}" method="POST">
-        <li><button class="dropdown-item" type="submit">Logout</button>       
+        <li><button class="dropdown-item" type="submit">Logout</button></li>
             @csrf
           </form>
         </li>    
