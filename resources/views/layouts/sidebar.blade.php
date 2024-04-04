@@ -22,9 +22,9 @@
                </span>
 
                  <div class="text header-text"></div>
-                    <span class="mx-1 fs-5 name text-white poppins-regular">Eternal Plans, Inc.</span>
+                    <span class="mx-1 fs-5 name text-white poppins-regular text">Eternal Plans, Inc.</span>
                  </div>
-             <i class='bx bxs-chevron-left toggle'></i>
+             <i class='bx bx-chevron-right toggle align-items-center'></i>
          </header> 
          <hr class="a">
 
@@ -32,7 +32,7 @@
              <div class="menu">             
               <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
-                    <a href="#" class="text-decoration-none nav-link d-flex align-items-center">                      
+                    <a href="{{ asset('home') }}" class="text-decoration-none nav-link d-flex align-items-center">                      
                             <i class='bx bxs-home text-decoration-none text-white icon'></i>
                             <span class="text nav-text ">Dashboard</span>                
                     </a>
@@ -46,7 +46,7 @@
               </li>
               
 
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a href="#" class="text-decoration-none nav-link d-flex align-items-center">                      
                         <i class='bx bx-history text-decoration-none text-white icon'></i>
                         <span class="text nav-text ">History</span>                
@@ -54,7 +54,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="#" class="text-decoration-none nav-link d-flex align-items-center">                      
+              <a href="{{ asset('sample') }}" class="text-decoration-none nav-link d-flex align-items-center">                      
                       <i class='bx bxs-cog text-decoration-none text-white icon'></i>
                       <span class="text nav-text ">Settings</span>                
               </a>
@@ -62,15 +62,14 @@
 
    
           <li class="nav-item">
-            <form id="logout-form" action="{{ route('sign-out') }}" method="POST" class="d-flex align-items-center">
+            <form id="logout-form" action="{{ route('sign-out') }}" method="POST" class="nav-item text-start d-flex align-items-center">
                 @csrf
-                <button type="submit" class="text-decoration-none nav-link">
+                <button type="submit" class="text-start text-decoration-none nav-link">
                     <i class='bx bxs-log-out text-white icon'></i>
-                    <span class="text nav-text mb-5">Logout</span>
+                    <span class="text nav-text mb-5 ">Logout</span>
                 </button>
             </form>
         </li>
-        {{-- <hr class="a"> --}}
       
       
           
@@ -131,4 +130,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="{{ asset('js/showPassword.js') }}"></script>
         <script src="{{ asset('js/validations.js') }}"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
+        
 

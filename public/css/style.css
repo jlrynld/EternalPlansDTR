@@ -63,23 +63,18 @@ th, td {
 
 :root{
     /* ==== COLORS ==== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #2e2e2e;
+    --body-color: #18191A;
+    --sidebar-color: #242526;
     --primarly-color: #00b33c;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #dfdfdf;
-
-     /* ==== TRANSITION ==== */
-     --tran-02: all 0.2 ease;
-     --tran-03: all 0.3 ease;
-     --tran-04: all 0.4 ease;
-     --tran-05: all 0.5 ease;
     }
     
 body{
     height: 100vh;
     background: var(--body-color) !important;
+    transition: all 0.25s ease-in-out;
 }
 
 /* ======= Resuable CSS ====== */
@@ -88,6 +83,11 @@ body{
     font-weight: 500;
     color: var(--text-color);
     padding-right: 20px;
+    transition: all 0.35s ease-in-out;
+}
+
+.sidebar.close .text{
+    opacity: 0;
 }
 
 .sidebar .image{
@@ -123,6 +123,35 @@ body{
         width: 250px;
         padding: 10px 14px;
         background: var(--sidebar-color);
+        transition: all 0.25s ease-in-out;
+}
+
+.sidebar.close{
+    width: 94px;
+}
+
+.sidebar.close li  {
+    width: 50px;
+}
+
+.sidebar.close .button {
+    width: 50px;
+}
+
+.sidebar.close .toggle{
+    position: absolute;
+    top: 15%;
+    right: -14%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primarly-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 19px;
 }
 
 .sidebar .image-text img{
@@ -148,18 +177,18 @@ header .image-text .header-text{
 
 .sidebar header .toggle{
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: -5%;
     transform: translateY(-50%);
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 25px;
     background: var(--primarly-color);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: var(--sidebar-color);
-    font-size: 22px;
+    font-size: 19px;
 }
 
 .sidebar ul {
@@ -167,7 +196,7 @@ header .image-text .header-text{
 }
 
 .sidebar li {
-    height: 38px;
+    height: 50px;
     margin-top: 10px;
     list-style:none;
     display: flex;
@@ -177,6 +206,7 @@ header .image-text .header-text{
 .sidebar li .icon{
     font-size:18px;
     margin-right: 10px;
+    margin: 8px;
 }
 
 .sidebar li .icon,
@@ -184,13 +214,12 @@ header .image-text .header-text{
     color: var(--text-color);
 }
 
-
 .sidebar li a:hover, .sidebar li button:hover{
         background: var(--primarly-color);
-    
     }
+
+.header  
 
 hr.a{
     border: 2px solid grey;
 }
-
