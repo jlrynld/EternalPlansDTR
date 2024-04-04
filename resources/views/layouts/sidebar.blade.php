@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- ====== Sidebar ====== -->
-    <nav class="sidebar">
+    <nav class="sidebar shadow-md">
          <header>
              <div class="image-text">
                 <span class="image">
