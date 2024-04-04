@@ -59,15 +59,6 @@
                       <span class="text nav-text ">Settings</span>                
               </a>
           </li>
-
-          <li class="nav-item">
-            <a id="logout-form" action="{{ route('sign-out') }}" method="POST" class="nav-item text-start d-flex align-items-center">                      
-                    <i class='bx bxs-cog text-decoration-none text-white icon'></i>
-                    <span class="text nav-text ">Settings</span>                
-            </a>
-        </li>
-
-
    
           <li class="nav-item">
             <form id="logout-form" action="{{ route('sign-out') }}" method="POST" class="nav-item text-start d-flex align-items-center">
@@ -78,60 +69,14 @@
                 </button>
             </form>
         </li>
-      
-      
-          
 
                 </ul>                           
               </div>           
          </div>
 
     </nav>
-<!--
-  <div class="p-4 text-white bg-dark sidebar close">
-    {{-- <a href="{{ asset('home') }}" class="d-flex text-white text-decoration-none">     --}}
-        <img class="mx-2 logo " src="css/logo/ETERNALLOGO.png" alt="index">
-      <span class="fs-4">Eternal Plans, Inc.</span>
-    </a>
-    <i class='bx bxs-chevron-right toggle'></i>
-    <hr>
-    <ul class="nav nav-pills flex-column">
-      <li class="nav-item">
-        {{-- <a href="{{ asset('home') }}" class="d-flex nav-link text-white" aria-current="page"> --}}
-          <i class='bx bxs-home'></i>  
-          <span class="text"> Dashboard </span>
-        </a>
-      </li>
-             
-      <li class="nav-item">
-        {{-- <a href="{{ asset('sample') }}" class="nav-link text-white" aria-current="page"> --}}
-          <i class='bx bxs-layer' ></i>
-          <span class="text"> Lorem Ipsum </span>
-        </a>
-      </li>
 
-    </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class='bx bxs-user-circle bx-sm p-1'></i>
-       {{-- <strong class ="text"> {{ auth()->user()->firstname }} </strong> --}}
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        {{-- <form action="{{ route('sign-out') }}" method="POST"> --}}
-        <li><button class="dropdown-item" type="submit">Logout</button></li>
-            {{-- @csrf --}}
-          </form>
-        </li>    
-      </ul>
-    </div>
-  </div>
 
--->
   </body>
 <footer class="mt-5"> </footer>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
