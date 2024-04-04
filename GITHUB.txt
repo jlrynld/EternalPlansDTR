@@ -1,0 +1,22 @@
+TO PUSH OR UPDATE THE BRANCH/REPOSITORY
+git add .
+git commit -m 'details of the commit'
+git push -u origin name_of_branch
+
+TO PULL OR GET THE UPDATED REPOSITORY
+git pull origin name_of_branch
+
+TO CHECK IF THERE'S CONFLICT
+git status
+
+CHECK BRANCH
+git branch
+
+CREATE NEW BRANCH
+git branch name_of_new_branch
+
+GO TO AN EXISTING BRANCH
+git checkout name_of_branch
+
+GET UPDATED REPOSITORY
+git fetch
