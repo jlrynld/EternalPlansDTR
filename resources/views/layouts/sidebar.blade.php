@@ -79,7 +79,7 @@
          </div>
 
     </nav>
-<!--
+
   <div class="p-4 text-white bg-dark sidebar close">
     {{-- <a href="{{ asset('home') }}" class="d-flex text-white text-decoration-none">     --}}
         <img class="mx-2 logo " src="css/logo/ETERNALLOGO.png" alt="index">
@@ -123,7 +123,6 @@
     </div>
   </div>
 
--->
   </body>
 <footer class="mt-5"> </footer>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

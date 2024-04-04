@@ -1,3 +1,6 @@
+
+/* ==== Sign in & Sign up CSS ==== */
+
 .align-items-center {
     align-items: center !important;
 }
@@ -267,8 +270,6 @@ header .image-text .header-text{
 .sidebar li a:hover, .sidebar li button:hover{
         background: var(--primarly-color);
     }
-
-.header  
 
 hr.a{
     border: 2px solid grey;
