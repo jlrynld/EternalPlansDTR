@@ -60,13 +60,21 @@
               </a>
           </li>
 
+          <li class="nav-item">
+            <a id="logout-form" action="{{ route('sign-out') }}" method="POST" class="nav-item text-start d-flex align-items-center">                      
+                    <i class='bx bxs-cog text-decoration-none text-white icon'></i>
+                    <span class="text nav-text ">Settings</span>                
+            </a>
+        </li>
+
+
    
           <li class="nav-item">
             <form id="logout-form" action="{{ route('sign-out') }}" method="POST" class="nav-item text-start d-flex align-items-center">
                 @csrf
                 <button type="submit" class="text-start text-decoration-none nav-link">
                     <i class='bx bxs-log-out text-white icon'></i>
-                    <span class="text nav-text mb-5 ">Logout</span>
+                    <span class="text nav-text mb-5">Logout</span>
                 </button>
             </form>
         </li>
