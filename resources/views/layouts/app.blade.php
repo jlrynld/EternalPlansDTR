@@ -8,12 +8,6 @@
 
     <title>@yield('title')</title>
 
-    @if (auth()->user()->ActiveStatus == 2 && strpos(request()->url(), '/change-password') == false)
-        <script>
-            window.location.href = '/change-password';
-        </script>
-    @endif
-
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -32,10 +26,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script> --}}
     <link href="{{ asset('img/favi.png') }}" rel="icon" />
-    <link href="{{ asset('/css/dashboard.css') }}" rel="stylesheet">
 </head>
 
-<body style="background: #e4e9f7">
+<body style="background: #18191A">
 
     <header class="header fixed-top header-scrolled" style="max-height: 170px">
         <div class="container">
@@ -81,7 +74,6 @@
         src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.js"></script>
     <script src="{{ asset('js/showPassword.js') }}"></script>
-    <script src="{{ asset('js/session.js') }}"></script>
     @yield('scripts')
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -107,10 +99,6 @@
         sidebarBtn.addEventListener("click", () => {
             sidebar.classList.toggle("close");
         });
-
-        var session = "{{ auth()->check() ? 'true' : 'false' }}"
-        if (!session)
-            window.location.replace("{{ route('sign-in.index') }}")
 
         var mediaQuery = window.matchMedia('(max-width: 600px)');
 
@@ -141,11 +129,6 @@
         });
 
         handleMediaQueryChange(mediaQuery);
-
-        $(document).ready(function() {
-            $('#notification-count-button').css('display', 'none');
-        });
-
     </script>
 </body>
 

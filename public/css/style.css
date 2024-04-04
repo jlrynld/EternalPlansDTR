@@ -3,18 +3,15 @@
 
 /* GENERAL */
 /* CSS when button is clicked */
-.inverted {
-    filter: invert(100%) hue-rotate(180deg);
-}
-
-.inverted img {
-    filter: invert(200%) hue-rotate(180deg);
-}
 
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background: white;
+    background: #18191A !important;
+}
+
+.card {
+    background-color: #5a5a5a;
 }
 
 :root {
@@ -22,7 +19,7 @@ body {
 }
 
 .text-green {
-    color: #14592D;
+    color: #27af59;
 }
 
 #amount-paid-info-span {
@@ -37,12 +34,12 @@ body {
 }
 
 a {
-    color: #14592D;
+    color: #27af59;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #14592D;
+    color: #27af59;
     text-decoration: none;
 }
 
@@ -102,7 +99,7 @@ footer {
 }
 
 .header.header-scrolled {
-    background: #fff;
+    background: #242526;
     padding: 15px 0;
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
@@ -121,7 +118,7 @@ footer {
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #14592D;
+    color: #27af59;
     font-family: "Nunito", sans-serif;
     margin-top: 3px;
     text-decoration: none !important;
@@ -146,7 +143,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100px;
-    color: #14592D;
+    color: #27af59;
 }
 
 .main-item {
@@ -173,7 +170,7 @@ footer {
 .main-item:hover,
 .sub-item:hover {
     background-color: rgb(184, 179, 179);
-    background: #14592D;
+    background: #27af59;
     color: white;
     text-decoration: bold;
 }
@@ -361,7 +358,7 @@ h6,
 #name-header {
     padding-left: 5%;
     padding-top: 0.8%;
-    color: #14592D;
+    color: #27af59;
     margin: 0px
 }
 
