@@ -12,17 +12,21 @@
             <hr class="m-0 mb-3">
            
             {{-- Clock-and-date --}}
-            <div class="clock-date-con container">
-                <h1 id="current-time"></h1>            
-            </div>
+            <div class="datetime" onload="initClock">
+                <div class="date">
+                    <span id="dayname">{{ now()->format('l')}}</span>,
+                    <span id="month">{{ now()->format('M')}}</span>
+                    <span id="daynum">{{ now()->format('d')}}</span>,
+                    <span id="year">{{ now()->format('Y')}}</span>
+                </div>
 
-            <script> 
-                let time = document.getElementById("current-time");
-                setInterval(() => {
-                    let d = new Date();
-                    time.innerHTML = d.toLocaleTimeString()
-                },1000)
-            </script>
+                <div class="time">
+                    <span id="hour">{{ now()->format('h') }}</span>:
+                    <span id="minutes">{{ now()->format('i')}}</span>:
+                    <span id="seconds">{{ now()->format('s')}}</span>
+                    <span id="period">{{ now()->format('A')}}</span>
+                </div>
+            </div>
             {{-- ------------------- --}}
         </div>
     </div>
@@ -56,4 +60,9 @@
 @endsection
 
 @section('scripts')
+    <script>
+        setInterval(() => {
+            getCurrentTime()
+        },1000)
+    </script>
 @endsection
