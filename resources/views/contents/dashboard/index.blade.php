@@ -29,6 +29,7 @@
                     <span id="hour">{{ now()->format('h') }}</span>:
                     <span id="minutes">{{ now()->format('i')}}</span>:
                     <span id="seconds">{{ now()->format('s')}}</span>
+                    &nbsp;
                     <span id="period">{{ now()->format('A')}}</span>
                 </div>
             </div>
@@ -60,7 +61,7 @@
             </div>
             
             <div class="dropdown d-flex justify-content-center mb-3">
-                <input style="width: 50%" type="submit" value="Submit" class="btn btn-success mb-3 mt-3" id="submitButton">
+                <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3" id="submitButton">
             </div>
             
             <script>
