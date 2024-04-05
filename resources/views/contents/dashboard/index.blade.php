@@ -17,7 +17,7 @@
             <hr class="m-0 mb-3">
            
             {{-- Clock-and-date --}}
-            <div class="datetime" onload="initClock">
+            <div class="datetime m-3" onload="initClock">
                 <div class="date">
                     <span id="dayname">{{ now()->format('l')}}</span>,
                     <span id="month">{{ now()->format('M')}}</span>
@@ -44,7 +44,7 @@
                   </select>
               </div>
 
-            <div class="d-flex justify-content-center mb-3">
+            <div class="d-flex justify-content-center mb-1">
                 <div class="input-group m-2" style="width: 24%">
                     <span class="input-group-text">#</span>
                     <div class="form-floating">
@@ -57,17 +57,11 @@
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" disabled>{{auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
                     <label for="floatingTextarea2Disabled">Employee Name: </label>
                   </div>
-
             </div>
             
             <div class="dropdown d-flex justify-content-center mb-3">
                 <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3">
             </div>
-            
-                
-           
-            
-
         </div>
     </div>
 

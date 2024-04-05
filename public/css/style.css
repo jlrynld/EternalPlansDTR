@@ -701,6 +701,11 @@ select option {
     letter-spacing: 1.5px;
 }
 
+.datetime{
+    color: #27af59;
+    font-family: 'Poppins', serif;
+}
+
 .time{
     font-style: 60px;
     font-size: 25px;
