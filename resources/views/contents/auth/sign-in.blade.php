@@ -3,24 +3,23 @@
 @section('contents')
     <div class="container" style="max-width: 600px;">
         <div class="mt-5">
-          <form action="{{ route ('sign-in') }} " method="POST">       
-            @csrf
-                <h3 class="mb-4 mx-auto text-center"> 
-                      Login with your email and password
-                 </h3>
+            <form action="{{ route ('sign-in') }} " method="POST">       
+                @csrf
+                    <h3 class="mb-4 mx-auto text-center"> 
+                         Login with your email and password
+                    </h3>
 
-             @if(session('success'))
-                <div class="alert alert-success" role="alert">
-                        {{ session('success') }}
-                </div>
-             @elseif(session('error'))
-                <div class="alert alert-danger" role="alert">
-                        {{ session('error') }}
-                </div>
-            @endif
+                    @if(session('success'))
+                        <div class="alert alert-success" role="alert">
+                             {{ session('success') }}
+                        </div>
+                    @elseif(session('error'))
 
-          
-
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+                         
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" name="email" id="email" placeholder="myemail@GMAIL.COM">
                     <label for="email">Email</label>
@@ -44,6 +43,6 @@
             <div class="text-center">Don't have an account? <a href="{{ route('sign-up.index') }}">Sign-up now</a>
             </div>
             </form>
-        </div>
+             </div>
      
 @endsection
