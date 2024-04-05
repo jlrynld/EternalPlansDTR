@@ -682,3 +682,28 @@ select option {
     }
 }
 
+/* clock design */
+.clock-date-con{
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clock-date-con h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    width: 300px;
+    font-family: 'Poppins', serif;
+}
+/* ------- */
+
+#name-span-header{
+    font-family: 'Poppins', serif;
+}
+
