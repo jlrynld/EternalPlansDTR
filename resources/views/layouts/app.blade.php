@@ -75,6 +75,8 @@
         src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.js"></script>
     <script src="{{ asset('js/showPassword.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+
     @yield('scripts')
     <script>
         let arrow = document.querySelectorAll(".arrow");

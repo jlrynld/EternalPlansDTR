@@ -20,6 +20,7 @@ body {
 
 .text-green {
     color: #27af59;
+    font-family: 'Poppins', serif;
 }
 
 #amount-paid-info-span {
@@ -693,14 +694,28 @@ select option {
     position: relative;
 }
 
-.clock-date-con h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    width: 300px;
-    font-family: 'Poppins', serif;
+.date{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.time{
+    font-style: 60px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+}
+
+.time span:last-child{
+    font-size: 20px;
+    font-weight: 350;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    padding: 0 5px;
 }
 
 #current-time{

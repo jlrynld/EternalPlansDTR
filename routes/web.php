@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/sample', [SampleController::class, 'index'])->name('dashboard.sample');
     Route::post('/sample', [SampleController::class, 'asdasdasd'])->name('sample');
 
+    Route::get('/get-current-time', [DashboardController::class, 'getCurrentTime']);
+
 });
 
 ?>
