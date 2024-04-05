@@ -11,7 +11,7 @@ body {
 }
 
 .card {
-    background-color: #5a5a5a;
+    background-color: #242526;
 }
 
 :root {
@@ -709,13 +709,6 @@ select option {
 /* ======= */
 
 /* ======= Form Floating for DTR ======= */
-
-.dtrform{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
 
 #name-span-header{
     font-family: 'Poppins', serif;
