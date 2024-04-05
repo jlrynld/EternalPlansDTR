@@ -36,32 +36,56 @@
          
 
             <div class="dropdown d-flex justify-content-center mb-3">
-                <select class="form-select form-select-lg w-50" aria-label=".form-select-lg example">                   
+                <select class="form-select form-select-lg w-50" aria-label=".form-select-lg example" id="selectAction">
                     <option value="1">Time in</option>
                     <option value="2">Time out</option>
                     <option value="3">Lunch in</option>
-                    <option value="3">Lunch out</option>
-                  </select>
-              </div>
-
+                    <option value="4">Lunch out</option> <!-- Corrected value attribute -->
+                </select>
+            </div>
+            
             <div class="d-flex justify-content-center mb-1">
                 <div class="input-group m-2" style="width: 24%">
                     <span class="input-group-text">#</span>
                     <div class="form-floating">
-                        <textarea type="email" class="form-control" id="floatingInput" placeholder="name@example.com" disabled>{{auth()->user()->id}} </textarea>
-                        <label for="floatingInput">Employee ID</label>
+                        <textarea type="email" class="form-control" id="employeeId" placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
+                        <label for="employeeId">Employee ID</label>
                     </div>
                 </div>    
-                
+            
                 <div class="form-floating w-25 m-2" style="width: 24%">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" disabled>{{auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
-                    <label for="floatingTextarea2Disabled">Employee Name: </label>
-                  </div>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
+                    <label for="employeeName">Employee Name:</label>
+                </div>
             </div>
             
             <div class="dropdown d-flex justify-content-center mb-3">
-                <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3">
+                <input style="width: 50%" type="submit" value="Submit" class="btn btn-success mb-3 mt-3" id="submitButton">
             </div>
+            
+            <script>
+                document.getElementById('selectAction').addEventListener('change', function() {
+                    var selectedOption = this.value;
+                    var actionText = '';
+                    switch (selectedOption) {
+                        case '1':
+                            actionText = 'Time in';
+                            break;
+                        case '2':
+                            actionText = 'Time out';
+                            break;
+                        case '3':
+                            actionText = 'Lunch in';
+                            break;
+                        case '4':
+                            actionText = 'Lunch out';
+                            break;
+                        default:
+                            actionText = '';
+                    }
+                    document.getElementById('submitButton').value = actionText;
+                });
+            </script>
         </div>
     </div>
 

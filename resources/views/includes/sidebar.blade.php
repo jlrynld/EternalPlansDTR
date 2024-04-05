@@ -25,6 +25,16 @@
         </li>
 
         <li>
+            <a href="{{ route('dashboard') }}">
+                <i class='bx bx-history'></i>
+                <span class="link_name">History</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">History</a></li>
+            </ul>
+        </li>
+
+        {{-- <li>
             <div class="icon-link">
                 <a href="#" onclick="openSidebar()">
                     <i class='bx bxs-edit'></i>
@@ -38,7 +48,7 @@
                 <li><a href="#">SUB LINK</a></li>
                 <li><a href="#">SUB LINK</a></li>
             </ul>
-        </li>
+        </li> --}}
         <li>
             <div class="icon-link">
                 <a href="#" onclick="openSidebar()">
