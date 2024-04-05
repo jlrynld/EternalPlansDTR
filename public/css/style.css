@@ -102,7 +102,7 @@ footer {
 .header.header-scrolled {
     background: #242526;
     padding: 15px 0;
-    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    /* box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1); */
 }
 
 .header .logo {
@@ -702,7 +702,7 @@ select option {
 }
 
 .datetime{
-    color: #27af59;
+    color: white;
     font-family: 'Poppins', serif;
 }
 

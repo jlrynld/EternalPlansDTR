@@ -33,7 +33,7 @@
     <header class="header fixed-top header-scrolled" style="max-height: 170px">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-sm-9 text-left" id="name-header">                                            
+                <div class="col-sm-9 text-left" id="name-header">
                     <h3 id="name-span-header">
                         {{-- <img class="logo p-3" src="css/logo/ETERNALLOGO.png" alt="logo">  --}}
                         Eternal Plans, Inc.
