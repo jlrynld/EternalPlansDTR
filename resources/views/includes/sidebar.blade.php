@@ -13,6 +13,17 @@
                 <li><a class="link_name" href="#">Dashboard</a></li>
             </ul>
         </li>
+
+        <li>
+            <a href="{{ route('dashboard') }}">
+                <i class='bx bxs-user'></i>
+                <span class="link_name">Profile</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Profile</a></li>
+            </ul>
+        </li>
+
         <li>
             <div class="icon-link">
                 <a href="#" onclick="openSidebar()">
@@ -55,7 +66,7 @@
                 @csrf
             </form>
         </li>
-        <li>
+        {{-- <li>
             <div class="profile-details">
                 <div></div>
                 <div class="name-job">
@@ -63,7 +74,7 @@
                     <div class="job">Developer</div>
                 </div>
             </div>
-        </li>
+        </li> --}}
     </ul>
 </div>
 

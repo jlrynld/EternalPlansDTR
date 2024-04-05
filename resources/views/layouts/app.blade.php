@@ -35,7 +35,7 @@
             <div class="row align-items-center">
                 <div class="col-sm-9 text-left" id="name-header">
                     <h3 id="name-span-header">
-                        TITLE OF PROJECT
+                        Eternal Plans, Inc.
                     </h3>
                 </div>
                 <div class="col-sm-3 text-center" id="logo-header">

@@ -6,7 +6,7 @@
 
     <div class="container mt-5">
         <div class="p-3 card shadow">
-            <h3 class="text-green">Header <a class="h4" href="{{ route('dashboard') }}" style="float:right;">
+            <h3 class="text-green">Daily Time Record <a class="h4" href="{{ route('dashboard') }}" style="float:right;">
                 <i class="far fa-arrow-alt-circle-left"></i> Back</a>
             </h3>
             <hr class="m-0 mb-3">
