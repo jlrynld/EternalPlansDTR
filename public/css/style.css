@@ -5,7 +5,7 @@
 /* CSS when button is clicked */
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Poppins', serif !important;
     color: #444444;
     background: #18191A !important;
 }
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Poppins', serif !important;
 }
 
 /* GENERAL */
@@ -107,6 +107,10 @@ footer {
 
 .header .logo {
     line-height: 0;
+}
+
+.logo {
+    width: 100px;
 }
 
 .header .logo img {
@@ -679,10 +683,12 @@ select option {
     }
 }
 
-/* clock design */
-.datetime{
-    color: #27af59;
-    font-family: 'Poppins', serif;
+/* ===== Clock Design ===== */
+
+.clock-date-con{
+    width: 10%;
+    height: 10vh;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -712,8 +718,19 @@ select option {
     padding: 0 5px;
 }
 
+#current-time{
+    color:#27af59
+}
+/* ======= */
 
-/* ------- */
+/* ======= Form Floating for DTR ======= */
+
+.dtrform{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 
 #name-span-header{
     font-family: 'Poppins', serif;
