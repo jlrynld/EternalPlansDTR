@@ -5,11 +5,25 @@
 @section('contents')
 
     <div class="container mt-5">
-        <div class="p-3 card shadow">
+        <div class="dtrcard p-3 card shadow">
             <h3 class="text-green">Daily Time Record <a class="h4" href="{{ route('dashboard') }}" style="float:right;">
                 <i class="far fa-arrow-alt-circle-left"></i> Back</a>
             </h3>
             <hr class="m-0 mb-3">
+           
+            {{-- Clock-and-date --}}
+            <div class="clock-date-con container">
+                <h1 id="current-time"></h1>            
+            </div>
+
+            <script> 
+                let time = document.getElementById("current-time");
+                setInterval(() => {
+                    let d = new Date();
+                    time.innerHTML = d.toLocaleTimeString()
+                },1000)
+            </script>
+            {{-- ------------------- --}}
         </div>
     </div>
 
