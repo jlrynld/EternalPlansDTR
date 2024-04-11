@@ -130,8 +130,10 @@
                             actionText = '';
                     }
                     document.getElementById('submitButton').value = actionText;
+                    document.getElementById('selectedAction').value = selectedOption;
                 });
             </script>
+         
         </div>
     </div>
 

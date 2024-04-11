@@ -25,7 +25,7 @@ class SignUpRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|in:Intern,Manager',
+            'type' => 'required|in:Employee,Manager',
             'firstname' => 'required|max:255|regex:/^[a-zA-Z\s]+$/',
             'lastname' => 'required|max:255|regex:/^[a-zA-Z\s]+$/',
             'email' => 'required|email|max:255|unique:users',
