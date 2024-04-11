@@ -19,7 +19,7 @@
 
             <hr class="m-0 mb-3" style="color: gray">
 
-            {{-- Clock-and-date --}}
+            {{--==============Clock-and-date================--}}
             <div class="datetime m-3" onload="initClock">
                 <div class="date">
                     <span id="dayname">{{ now()->format('l')}}</span>,
@@ -36,17 +36,17 @@
                     <span id="period">{{ now()->format('A')}}</span>
                 </div>
             </div>
-            {{-- ------------------- --}}
+            {{-- ====================================== --}}
 
 
-            <div class="dropdown d-flex justify-content-center mb-3">
+             <div class="dropdown d-flex justify-content-center mb-3">
                 <select class="form-select form-select-lg w-50" aria-label=".form-select-lg example" id="selectAction">
                     <option value="1">Time in</option>
                     <option value="2">Time out</option>
                     <option value="3">Lunch in</option>
                     <option value="4">Lunch out</option> <!-- Corrected value attribute -->
                 </select>
-            </div>
+            </div> 
 
             <div class="d-flex justify-content-center mb-1">
                 <div class="input-group m-2" style="width: 24%">
@@ -62,11 +62,53 @@
                     <label for="employeeName">Employee Name:</label>
                 </div>
             </div>
-
-            <div class="dropdown d-flex justify-content-center mb-3">
-                <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3" id="submitButton">
-            </div>
-
+            
+            {{--=================Sweet Alert Script=====================--}}
+            <div class="container">
+                <div class="dropdown d-flex justify-content-center mb-3">
+                  <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3" id="submitButton">
+                </div>
+              </div>
+            
+              <script>
+                document.getElementById('submitButton').addEventListener('click', function() {
+                  const swalWithBootstrapButtons = Swal.mixin({
+                    customClass: {
+                      confirmButton: "btn btn-success",
+                      cancelButton: "btn btn-danger"
+                    },
+                    buttonsStyling: false
+                  });
+                  
+                  swalWithBootstrapButtons.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      swalWithBootstrapButtons.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                      });
+                    } else if (
+                      /* Read more about handling dismissals below */
+                      result.dismiss === Swal.DismissReason.cancel
+                    ) {
+                      swalWithBootstrapButtons.fire({
+                        title: "Cancelled",
+                        text: "Your imaginary file is safe :)",
+                        icon: "error"
+                      });
+                    }
+                  });
+                });
+              </script>
+            {{--========================================================--}}
             <script>
                 document.getElementById('selectAction').addEventListener('change', function() {
                     var selectedOption = this.value;

@@ -695,20 +695,20 @@ select option {
 }
 
 .date{
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 1.5px;
 }
 
 .datetime{
-    color: white;
+    color: #27af59;
     font-family: 'Poppins', serif;
 }
 
 .time{
     font-style: 60px;
-    font-size: 45px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
