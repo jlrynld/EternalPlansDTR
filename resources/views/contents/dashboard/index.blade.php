@@ -48,7 +48,8 @@
                 </select>
             </div> 
 
-            <div class="row" style="width: 50%">
+            {{-- ======================Profile======================== --}}
+            <div class="profile-row row" style="width: 50%">
                 <div class="col-6">
                     <img src="css/logo/Defaultpic.png" class="img-fluid"alt="Default Profile Pic">
                 </div>
@@ -67,20 +68,8 @@
                         <label for="employeeName">Employee Name:</label>
                     </div> 
                 </div>
-                {{-- <div class="input-group m-2" style="width: 24%">
-                    <span class="input-group-text">#</span>
-                    <div class="form-floating">
-                        <textarea type="email" class="form-control" id="employeeId" style="resize: none;" disabled>{{ auth()->user()->id }}</textarea>
-                        <label for="employeeId">Employee ID</label>
-                    </div>
-                </div>
-
-                <div class="form-floating w-25 m-2" style="width: 23.5%">
-                    <textarea class="form-control" placeholder="Leave a comment here" style="resize: none;" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
-                    <label for="employeeName">Employee Name:</label>
-                </div> --}}
             </div>
-            
+            {{-- ================================================== --}}
             
             <div class="container">
                 <form action="{{ route('dashboard') }}" method="POST" id="dtrForm">
