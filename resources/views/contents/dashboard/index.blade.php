@@ -57,13 +57,13 @@
                     <div class="input-group m-2" style="width: 94%">
                         <span class="input-group-text">#</span>
                         <div class="form-floating">
-                            <textarea type="email" class="form-control" id="employeeId" placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
+                            <textarea type="email" class="form-control" id="employeeId" style="resize: none; placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
                             <label for="employeeId">Employee ID</label>
                         </div>
                     </div>
 
                     <div class="form-floating m-2">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" style="resize: none; id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
                         <label for="employeeName">Employee Name:</label>
                     </div> 
                 </div>
@@ -79,9 +79,9 @@
                     <textarea class="form-control" placeholder="Leave a comment here" style="resize: none;" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
                     <label for="employeeName">Employee Name:</label>
                 </div> --}}
-            </div>
+            </div>      
             
-            
+           
             <div class="container">
                 <form action="{{ route('dashboard') }}" method="POST" id="dtrForm">
                     @csrf

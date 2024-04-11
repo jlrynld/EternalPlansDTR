@@ -25,9 +25,6 @@ Route::middleware('auth')->group(function(){
     // Route::post('/home', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::post('/home', [DashboardController::class, 'recordTime'])->name('dashboard');
 
-    Route::get('/sample', [SampleController::class, 'index'])->name('dashboard.sample');
-    Route::post('/sample', [SampleController::class, 'asdasdasd'])->name('sample');
-
     Route::get('/get-current-time', [DashboardController::class, 'getCurrentTime']);
 
 });
