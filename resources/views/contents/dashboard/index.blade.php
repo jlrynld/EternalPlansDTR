@@ -49,66 +49,69 @@
             </div> 
 
             <div class="d-flex justify-content-center mb-1">
-                <div class="input-group m-2" style="width: 24%">
+                <div class="input-group m-2" style="width: 23.5%">
                     <span class="input-group-text">#</span>
                     <div class="form-floating">
-                        <textarea type="email" class="form-control" id="employeeId" placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
+                        <textarea type="email" class="form-control" id="employeeId" style="resize: none;" disabled>{{ auth()->user()->id }}</textarea>
                         <label for="employeeId">Employee ID</label>
                     </div>
                 </div>
 
-                <div class="form-floating w-25 m-2" style="width: 24%">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
+                <div class="form-floating w-25 m-2" style="width: 23.5%">
+                    <textarea class="form-control" placeholder="Leave a comment here" style="resize: none;" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
                     <label for="employeeName">Employee Name:</label>
                 </div>
-            </div>
-            
-            {{--=================Sweet Alert Script=====================--}}
+            </div>      
+           
             <div class="container">
-                <div class="dropdown d-flex justify-content-center mb-3">
-                  <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3" id="submitButton">
-                </div>
-              </div>
-            
-              <script>
-                document.getElementById('submitButton').addEventListener('click', function() {
-                  const swalWithBootstrapButtons = Swal.mixin({
-                    customClass: {
-                      confirmButton: "btn btn-success",
-                      cancelButton: "btn btn-danger"
-                    },
-                    buttonsStyling: false
-                  });
-                  
-                  swalWithBootstrapButtons.fire({
-                    title: "Are you sure?",
-                    text: "You won't be able to revert this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Yes, delete it!",
-                    cancelButtonText: "No, cancel!",
-                    reverseButtons: true
-                  }).then((result) => {
-                    if (result.isConfirmed) {
-                      swalWithBootstrapButtons.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
-                        icon: "success"
-                      });
-                    } else if (
-                      /* Read more about handling dismissals below */
-                      result.dismiss === Swal.DismissReason.cancel
-                    ) {
-                      swalWithBootstrapButtons.fire({
-                        title: "Cancelled",
-                        text: "Your imaginary file is safe :)",
-                        icon: "error"
-                      });
-                    }
-                  });
+                <form action="{{ route('dashboard') }}" method="POST" id="dtrForm">
+                    @csrf
+                    <input type="hidden" name="action" id="selectedAction" value="">
+                    <div class="dropdown d-flex justify-content-center mb-3">
+                        <button style="width: 50%" class="btn btn-success mb-3 mt-3" id="submitButton">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            {{-- Sweet Alert Script --}}
+            <script>
+                document.getElementById('submitButton').addEventListener('click', function(event) {
+                    event.preventDefault();
+        
+                    const selectedAction = document.getElementById('selectAction').value;
+        
+                    const swalWithBootstrapButtons = Swal.mixin({
+                        customClass: {
+                            confirmButton: "btn btn-success btn-lg",
+                            cancelButton: "btn btn-danger btn-lg"
+                        },
+                        buttonsStyling: false
+                    });
+        
+                    swalWithBootstrapButtons.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "question",
+                        showCancelButton: true,
+                        cancelButtonText: "No",
+                        confirmButtonText: "Yes",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Set the selected action to the hidden input
+                            document.getElementById('selectedAction').value = selectedAction;
+                            // Submit the form
+                            document.getElementById('dtrForm').submit();
+                        } else if (result.dismiss === Swal.DismissReason.cancel) {
+                            swalWithBootstrapButtons.fire({
+                                title: "Cancelled",
+                                icon: "error"
+                            });
+                        }
+                    });
                 });
-              </script>
-            {{--========================================================--}}
+            </script>
+            {{-- End Sweet Alert Script --}}
+
             <script>
                 document.getElementById('selectAction').addEventListener('change', function() {
                     var selectedOption = this.value;
