@@ -734,14 +734,14 @@ select option {
     font-family: 'Poppins', serif;
 }
 
-.row{
+.profile-row{
     align-items: center;
     position: relative;
     left: 27%;
 }
 
 .img-fluid{
-    width: 150px; 
+    width: 175px; 
     height: 150px;
     margin-left: 15%;
     border-radius: 2%;
