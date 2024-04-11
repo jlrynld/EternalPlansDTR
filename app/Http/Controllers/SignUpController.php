@@ -13,7 +13,6 @@ class SignUpController extends Controller {
 
     public function signUp(SignUpRequest $request){
           try {
-
                 User::create([
                     'type' => $request->type,
                     'firstname' => $request->firstname,
