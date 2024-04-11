@@ -48,8 +48,26 @@
                 </select>
             </div> 
 
-            <div class="d-flex justify-content-center mb-1">
-                <div class="input-group m-2" style="width: 24%">
+            <div class="row" style="width: 50%">
+                <div class="col-6">
+                    <img src="css/logo/Defaultpic.png" class="img-fluid"alt="Default Profile Pic">
+                </div>
+                
+                <div class="col-6">
+                    <div class="input-group m-2" style="width: 94%">
+                        <span class="input-group-text">#</span>
+                        <div class="form-floating">
+                            <textarea type="email" class="form-control" id="employeeId" placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
+                            <label for="employeeId">Employee ID</label>
+                        </div>
+                    </div>
+
+                    <div class="form-floating m-2">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
+                        <label for="employeeName">Employee Name:</label>
+                    </div> 
+                </div>
+                {{-- <div class="input-group m-2" style="width: 24%">
                     <span class="input-group-text">#</span>
                     <div class="form-floating">
                         <textarea type="email" class="form-control" id="employeeId" placeholder="name@example.com" disabled>{{ auth()->user()->id }}</textarea>
@@ -60,16 +78,17 @@
                 <div class="form-floating w-25 m-2" style="width: 24%">
                     <textarea class="form-control" placeholder="Leave a comment here" id="employeeName" disabled>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</textarea>
                     <label for="employeeName">Employee Name:</label>
-                </div>
+                </div> --}}
             </div>
             
-            {{--=================Sweet Alert Script=====================--}}
+            
             <div class="container">
                 <div class="dropdown d-flex justify-content-center mb-3">
                   <input style="width: 50%" type="submit" value="Time in" class="btn btn-success mb-3 mt-3" id="submitButton">
                 </div>
               </div>
-            
+              
+              {{--=================Sweet Alert Script=====================--}}
               <script>
                 document.getElementById('submitButton').addEventListener('click', function() {
                   const swalWithBootstrapButtons = Swal.mixin({
@@ -83,11 +102,11 @@
                   swalWithBootstrapButtons.fire({
                     title: "Are you sure?",
                     text: "You won't be able to revert this!",
-                    icon: "warning",
+                    icon: "question",
                     showCancelButton: true,
                     confirmButtonText: "Yes, delete it!",
                     cancelButtonText: "No, cancel!",
-                    reverseButtons: true
+                    // reverseButtons: true
                   }).then((result) => {
                     if (result.isConfirmed) {
                       swalWithBootstrapButtons.fire({
