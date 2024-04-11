@@ -44,7 +44,7 @@
                     <option value="1">Time in</option>
                     <option value="2">Time out</option>
                     <option value="3">Lunch in</option>
-                    <option value="4">Lunch out</option> <!-- Corrected value attribute -->
+                    <option value="4">Lunch out</option> 
                 </select>
             </div> 
 

@@ -11,22 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dtr_records', function (Blueprint $table) {
+        Schema::create('dtr', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('employee_id');
-            $table->string('type');
+            $table->unsignedBigInteger('user_id');      
             $table->string('firstname');
             $table->string('lastname');
             $table->string('date');
-            $table->string('timein');
-            $table->string('timeout');
-            $table->string('lunchin');
-            $table->string('lunchout');
-            $table->timestamps();
+            $table->string('type');
+            $table->string('time');             
 
             $table->index('user_id');
-            $table->index('employee_id');
 
             $table->foreign('user_id')->references('id')->on('users');
         });
