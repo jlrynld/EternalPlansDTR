@@ -35,7 +35,6 @@
             </div>
             {{-- ------------------- --}}
          
-
             <div class="dropdown d-flex justify-content-center mb-3">
                 <select class="form-select form-select-lg w-50" aria-label=".form-select-lg example" id="selectAction">
                     <option value="1">Time in</option>
@@ -85,8 +84,10 @@
                             actionText = '';
                     }
                     document.getElementById('submitButton').value = actionText;
+                    document.getElementById('selectedAction').value = selectedOption;
                 });
             </script>
+         
         </div>
     </div>
 
