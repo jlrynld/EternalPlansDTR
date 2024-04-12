@@ -81,8 +81,8 @@
                 </form>
             </div>
 
-            {{-- Sweet Alert Script --}}
-            {{-- <script>
+            {{-- Sweet Alert Script  --}}
+            <script>
                 document.getElementById('submitButton').addEventListener('click', function(event) {
                     event.preventDefault();
         
@@ -117,8 +117,8 @@
                         }
                     });
                 });
-            </script> --}}
-            {{-- End Sweet Alert Script --}}
+            </script>
+            {{-- {{-- End Sweet Alert Script --}}
 
             {{-- <script>
                 document.getElementById('selectAction').addEventListener('change', function() {
