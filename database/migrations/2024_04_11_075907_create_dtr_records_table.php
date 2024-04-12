@@ -14,14 +14,12 @@ return new class extends Migration
         Schema::create('dtr', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');      
-            $table->string('firstname');
-            $table->string('lastname');
             $table->string('date');
             $table->string('type');
             $table->string('time');             
+            $table->timestamps();
 
             $table->index('user_id');
-
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

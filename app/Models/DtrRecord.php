@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class DtrRecord extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = [
+        'type',
+        'firstname',
+        'lastname',
+        'email',
+        'password',
+    ];
+
+    protected $table = 'dtr_records';
 }

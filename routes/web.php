@@ -22,7 +22,6 @@ Route::middleware('auth')->group(function(){
     Route::post('/sign-out', [SignOutController::class, 'signOut'])->name('sign-out');
 
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.index');
-    // Route::post('/home', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::post('/home', [DashboardController::class, 'recordTime'])->name('dashboard');
 
     Route::get('/get-current-time', [DashboardController::class, 'getCurrentTime']);

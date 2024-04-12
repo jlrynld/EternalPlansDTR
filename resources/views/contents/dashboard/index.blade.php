@@ -82,7 +82,7 @@
             </div>
 
             {{-- Sweet Alert Script --}}
-            <script>
+            {{-- <script>
                 document.getElementById('submitButton').addEventListener('click', function(event) {
                     event.preventDefault();
         
@@ -117,10 +117,10 @@
                         }
                     });
                 });
-            </script>
+            </script> --}}
             {{-- End Sweet Alert Script --}}
 
-            <script>
+            {{-- <script>
                 document.getElementById('selectAction').addEventListener('change', function() {
                     var selectedOption = this.value;
                     var actionText = '';
@@ -143,11 +143,10 @@
                     document.getElementById('submitButton').value = actionText;
                     document.getElementById('selectedAction').value = selectedOption;
                 });
-            </script>
+            </script> --}}
          
         </div>
     </div>
-
 
 @endsection
 
